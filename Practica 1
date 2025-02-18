@@ -1,0 +1,33 @@
+def es_palidromo(n):
+    
+    ingresado = n  
+    
+    invertido = 0
+ #////////////////////////////////   
+    while n > 0:
+        digito = n % 10  
+        
+        invertido = invertido * 10 + digito  
+        print(f"El número {n} es un WAWAW.")
+        
+        print(f"El número {invertido} es un aaaaa.")
+        
+        n = n // 10  
+    
+    return ingresado == invertido
+
+
+
+#////////////////////////////////
+def main():
+   
+    n = int(input("Ingresa un número: "))
+    
+    if es_palidromo(n):
+        print(f"El número {n} es un palíndromo.")
+    else:
+        print(f"El número {n} no es un palíndromo.")
+
+# //////////////////////////
+if __name__ == "__main__":
+    main()
